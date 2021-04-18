@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Training" parallel="tests" thread-count="8">
+
+  <test name="Notino Chrome">
+    <parameter name="browserName" value="Chrome" />
+    <parameter name="testDataFileName" value="notino.properties" />
+    <parameter name="waitCart" value="10" />
+    <classes>
+      <class name="com.irinadyachenko.notino.FragranceManipulation" />
+    </classes>
+  </test>
+
+  <test name="Notino Firefox">
+    <parameter name="browserName" value="Firefox" />
+    <parameter name="testDataFileName" value="notino.properties" />
+    <parameter name="waitCart" value="0" />
+    <classes>
+      <class name="com.irinadyachenko.notino.FragranceManipulation"/>
+    </classes>
+  </test>
+
+</suite>
